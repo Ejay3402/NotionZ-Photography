@@ -1,0 +1,45 @@
+@use "variables" as v;
+
+/* font */
+
+/*Roboto*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset part */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+}
+
+body {
+  background: v.$BG-COLOR;
+  color: v.$TEXT-COLOR;
+  font-family: "Roboto", sans-serif, monospace;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+a,
+a:focus, 
+a:active {
+    text-decoration: none;
+}

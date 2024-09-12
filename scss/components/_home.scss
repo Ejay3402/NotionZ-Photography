@@ -1,0 +1,137 @@
+@use "function" as f;
+@use "variables" as v;
+@use "mixins" as m;
+@use "breakpoint" as b;
+
+/* home part */
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(12, 34, 12, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../tee-stix-pics/aboutMe.jpg");
+  @include m.image-set();
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  animation: img 22s ease-in-out infinite both;
+  @include b.breakPoint(large) {
+    padding: 160px 7% 120px;
+  }
+  @keyframes img {
+    0% {
+      background: linear-gradient(rgba(12, 34, 12, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../tee-stix-pics/FB_IMG_17187102433922935.jpg");
+      @include m.image-set();
+    }
+
+    33% {
+      background: linear-gradient(rgba(12, 34, 12, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../tee-stix-pics/DSC_7112.jpg");
+      @include m.image-set();
+    }
+
+    66% {
+      background: linear-gradient(rgba(12, 34, 12, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../tee-stix-pics/FB_IMG_17187102586848256.jpg");
+      @include m.image-set();
+    }
+
+    99% {
+      background: linear-gradient(rgba(12, 34, 12, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../tee-stix-pics/aboutMe.jpg");
+      @include m.image-set();
+    }
+  }
+
+  .home-text span,
+  h3 span {
+    color: v.$MAIN-COLOR;
+  }
+  .slide {
+    margin-bottom: 11px;
+    border-bottom: 3px solid red;
+    padding: 15px 1px;
+    .one {
+        display: inline-block;
+        margin-right: 15px;
+        padding: 1.3px 15px;
+        height: 32px;
+        color: v.$TEXT-COLOR;
+        background: v.$MAIN-COLOR;
+        font-weight: 700;
+        line-height: 32px;
+        text-transform: uppercase;
+        font-size: f.rem(22);
+        border-radius: 6px;
+      }
+    .two {
+        display: inline-block;
+        color: v.$SECOND-TEXT-COLOR;
+        font-weight: 700;
+        font-size: f.rem(21);
+    }
+  }
+  h2 {
+    font-size: v.$BIG-FONT;
+    color: v.$SECOND-TEXT-COLOR;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  h3 {
+    font-size: v.$H2-FONT;
+    color: v.$SECOND-TEXT-COLOR;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0 0 15px;
+  }
+  p {
+    font-size: v.$TEXT-COLOR;
+    color: v.$TEXT-COLOR;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0 0 18px;
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    .btn1 {
+        @include m.button();
+    }
+    .btn1:hover {
+        @include m.button-hover();
+    }
+    .btn2 {
+        display: flex;
+        font-size: v.$P-FONT;
+        text-align: center;
+        color: v.$TEXT-COLOR;
+        font-weight: 700;
+        justify-content: center;
+        transition: .600s ease-in-out;
+        .play {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            align-items: center;
+            justify-content: center;
+            background: v.$MAIN-COLOR;
+            margin-right: 15px;
+            margin-left: 25px;
+            padding: 12px;
+            border-radius: 50%;
+        }
+    }
+    .btn2:hover {
+        transform: scale(0.984);
+        color: v.$MAIN-HOVER-COLOR;
+      }
+  }
+  
+}

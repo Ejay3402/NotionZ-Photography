@@ -1,0 +1,63 @@
+@use "function" as f;
+@use "variables" as v;
+
+
+/* image settings */
+
+@mixin image-set {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+
+@mixin button {
+  display: inline;
+  font-size: v.$P-FONT;
+  padding: 12px 20px;
+  color: v.$TEXT-COLOR;
+  background: linear-gradient(to right, v.$MAIN-COLOR 70%, rgb(42, 42, 105));
+  line-height: 1.1;
+  border-radius: 11px;
+  font-weight: 700;
+  margin: 0 0 15px;
+  letter-spacing: 1px;
+  transition: all .555s ease-in-out;
+}
+
+@mixin button-hover {
+    transform: scale(0.984);
+    background: v.$MAIN-HOVER-COLOR;
+}
+
+//grid
+@mixin grid-2fr {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.3rem;
+}
+@mixin grid-1fr {
+  display: grid;
+}
+
+// grid 
+
+@mixin grid-compress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, auto));
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+//h2 effect 
+@mixin h2 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: v.$H2-FONT;
+  padding: 0 0 10px;
+  border-bottom: 3px solid v.$MAIN-HOVER-COLOR;
+}

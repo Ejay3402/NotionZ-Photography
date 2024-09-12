@@ -1,0 +1,32 @@
+@use "function" as f;
+@use "variables" as v;
+@use "mixins" as m;
+
+/* video part */
+
+.works {
+    position: relative;
+    text-align: center;
+    .work-text {
+        h2 {
+            @include m.h2();
+            text-align: center
+        }
+        p {
+            text-align: center
+        }
+    }
+
+    .work-videos {
+        @include m.grid-compress();
+        grid-template-columns: repeat(auto-fit, minmax(305px, auto));
+        video {
+            width: 450px;
+            max-width: 310px;
+            height: 65vh;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+} 
+

@@ -1,0 +1,45 @@
+@use "function" as f;
+@use "variables" as v;
+@use "mixins" as m;
+
+/* services part */
+
+.service {
+    background: v.$SECOND-BG-COLOR;
+    .service-text {
+        text-align: center;
+        h2 {
+            @include m.h2();
+        }
+    }
+    .service-con {
+        @include m.grid-compress();
+        .box {
+            border-radius: 11px;
+            background: v.$BG-COLOR;
+            padding: 15px 20px;
+            transition: 0.48s ease-out;
+            h3 {
+                margin: 0 0 15px;
+                padding: 0 0 15px;
+                font-size: f.rem(25);
+                font-weight: 700;
+                color: v.$SECOND-TEXT-COLOR;
+                border-bottom: 2px solid v.$MAIN-HOVER-COLOR;
+            }
+            p {
+                color: v.$SECOND-TEXT-COLOR;
+                font-weight: 700;
+                font-size: f.rem(16);
+                line-height: 1.3;
+            }
+        }
+        .box:hover {
+            transform: scale(1.1) translateY(-10px);
+            cursor: pointer;
+            background: rgb(36, 15, 8);
+            box-shadow: 2px 2px 5px v.$MAIN-HOVER-COLOR,
+              -2px -2px 5px v.$MAIN-HOVER-COLOR;
+        }
+    }
+}

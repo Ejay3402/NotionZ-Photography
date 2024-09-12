@@ -1,0 +1,74 @@
+@use "variables" as v;
+@use "function" as f;
+@use "breakpoint" as b;
+
+/* header part */
+
+header {
+  color: v.$TEXT-COLOR;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 7%;
+  border-bottom: 2px solid transparent;
+  transition: all 0.45s ease-in-out;
+  @include b.breakPoint(large) {
+    padding: 12px 2.5%;
+  }
+  .logo img {
+    width: 110px;
+    margin-left: 18px;
+    max-width: 500px;
+  }
+  .nav-list {
+    display: flex;
+    position: relative;
+    a {
+      position: relative;
+      margin: 0 25px;
+      font-weight: 600;
+      font-size: f.rem(17);
+      transition: all 0.45s ease-in;
+      color: v.$SECOND-TEXT-COLOR;
+    }
+    a:hover {
+        color: v.$MAIN-COLOR;
+    }
+    a::after {
+        content: "";
+        height: 4px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.42s ease-in-out;
+        background: v.$MAIN-HOVER-COLOR;
+    }
+    a:hover::after {
+        width: 100%;
+    }
+  }
+  .open-meun {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.46s ease-in-out;
+    margin-left: 25px;
+    z-index: 1000;
+    font-weight: 700;
+    font-size: f.rem(21);
+    display: none;
+    transition: .600s ease-in-out;
+    @include b.breakPoint(tablet) {
+      display: block;
+    }
+  }
+  .open-meun:hover {
+    color: v.$MAIN-COLOR;
+  }
+}

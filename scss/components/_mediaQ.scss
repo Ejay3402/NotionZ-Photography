@@ -1,0 +1,165 @@
+@use "function" as f;
+@use "variables" as v;
+@use "mixins" as m;
+@use "breakpoint" as b;
+
+/* media screen part */
+@include b.breakPoint(tablet) {
+    $BIG-FONT: 3.7rem;
+    $H2-FONT: 2.4rem;
+    $P-FONT: 0.8222rem;
+
+
+    header {
+        .nav-list {
+            position: absolute;
+            top: -1000px;
+            right: 0;
+            left: 0;
+            text-align: left;
+            display: flex;
+            flex-flow: column wrap;
+            background: v.$BG-COLOR;
+            transition: 0.5s ease-in-out;
+            border-bottom-right-radius: 11px;
+            border-bottom-left-radius: 11px;
+            overflow: hidden;
+            a {
+                display: block;
+                margin: 2px;
+                font-size: 1.2rem;
+                background: v.$BG-COLOR;
+                width: 100%;
+                padding: 12px;
+            }
+            a:hover {
+                background: v.$MAIN-HOVER-COLOR;
+                color: v.$SECOND-TEXT-COLOR;
+            }
+        }
+        .open {
+            top: 100%;
+        }
+    }
+
+    .home {
+        padding: 160px 6.5% 120px;
+        height: 98vh;
+        h2 {
+            font-size: 3.7rem;
+        }
+        h3 {
+            font-size: 2.4rem;
+        }
+        p {
+            letter-spacing: normal;
+            line-height: 1.4;
+        }
+    }
+    .service {
+        padding: 100px 13% 25px;
+    }
+    
+    .portfolio {
+        padding: 100px 3% 25px;
+    }
+
+}
+
+/* mini screen */
+@include b.breakPoint(mini-tablet) {
+  
+   h2 {
+    font-size: 2.7rem;
+   } 
+
+  header {
+    padding: 12px;
+  }
+
+  header .logo img {
+    margin-left: 0px;
+  }
+
+  .home {
+    padding: 160px 5.5% 120px;
+    height: 111vh;
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1rem;
+        letter-spacing: normal;
+        line-height: 1.4;
+    }
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    .about-text {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        p {
+            font-size: f.rem(15.5);
+            letter-spacing: normal;
+        }
+    }
+    .about-img {
+        text-align: center;
+        order: 2;
+        max-width: 100%;
+    }
+  }
+
+  .service {
+    padding: 100px 11% 25px;
+    .service-text {
+        h2 {
+            font-size: 2.6rem;
+            text-align: center;
+        }
+    }
+  }
+
+  .contact {
+    .contact-text {
+        h2 {
+            font-size: 2.6rem;
+            text-align: center;
+        }
+    }
+    .contact-con {
+        grid-template-columns: 1fr;
+      }
+      .contact-social a {
+        margin: 5px;
+      }
+      .contact-list li a {
+        letter-spacing: normal;
+      }
+  }
+
+  
+  
+}
+
+@include b.breakPoint(phone) {
+    .hone {
+        .btns {
+            button {
+                background: blue;
+                font-size: 500px;
+            } 
+        }
+    }
+
+    .service {
+        padding: 100px 10% 25px;
+    }
+    
+}

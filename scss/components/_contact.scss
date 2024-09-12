@@ -1,0 +1,135 @@
+@use "function" as f;
+@use "variables" as v;
+@use "mixins" as m;
+
+/* contact part */
+
+.contact {
+    background: linear-gradient(rgba(2, 4, 12, 0.7), rgba(0, 0, 0, 0.9)), url(https://i.pinimg.com/564x/bd/7c/ad/bd7cadf123762f44278b1cd88ddced9f.jpg);
+    @include m.image-set();
+    .contact-text {
+        text-align: center;
+        h2 {
+            @include m.h2();
+        }
+    }
+    .contact-con {
+        @include m.grid-2fr();
+        .contact-list {
+            h4 {
+                margin: 11px auto;
+                font-weight: 700;
+                font-size: f.rem(16);
+            }
+            p {
+                margin: 11px auto;
+                font-weight: 700;
+                font-size: f.rem(16);
+            }
+            li {
+                margin: 10px auto;
+                i {
+                    color: red;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    margin-right: 3px;
+                    padding: 2px;
+                }
+                a {
+                    color: v.$SECOND-TEXT-COLOR;
+                    font-weight: 700;
+                    font-size: v.$P-FONT;
+                    margin-right: 3px;
+                    padding: 3px;
+                    letter-spacing: 0.1em;
+                    transition: 0.45s ease-in;
+                }
+                a:hover {
+                    color: v.$MAIN-HOVER-COLOR;
+                    font-size: f.rem(16);
+                }
+            }
+        }
+        .contact-social {
+            margin-top: 50px;
+            margin-left: 11px;
+            a {
+                margin: 17px;
+                font-size: f.rem(16);
+                font-weight: 700;
+                color: v.$TEXT-COLOR;
+                padding: 10px 12px;
+                background: transparent;
+                border-radius: 50%;
+                border: 1.5px solid var(--MAIN-HOVER-COLOR);
+                transition: 0.5s ease-in-out;
+            }
+            a:hover {
+                background: v.$TEXT-COLOR;
+                color: v.$BG-COLOR;
+                transform: scale(1.1);
+                border: none;
+            }
+            .facebook:hover {
+                color: rgb(21, 21, 251);
+            }
+            .whatapp:hover {
+                color: rgb(21, 155, 21);
+            }  
+            .instagram:hover {
+                color: red;
+            }
+        }
+    }
+    
+    .contact-form {
+        form {
+            position: relative;
+            margin-top: 15px;
+            h2 {
+                @include m.h2();
+                font-size: f.rem(17);
+                text-align: center;
+            }
+            label {
+                padding: 8ox;
+                font-weight: 700;
+                font-size: 1.3rem;
+                margin-top: 11px;
+                margin-bottom: 15px;
+            }
+            input,
+            textarea {
+                width: 100%;
+                color: v.$TEXT-COLOR;
+                background: v.$SECOND-BG-COLOR;
+                font-size: 1rem;
+                border-radius: 9px;
+                font-weight: 700;
+                border: none;
+                border-bottom: 3.5px solid v.$MAIN-HOVER-COLOR;
+                padding: 15px;
+                margin: 10px auto;
+            }
+            textarea {
+                resize: vertical;
+                height: 80px;
+            }
+            input:focus,
+            textarea:focus {
+                border: 2.1px solid v.$MAIN-HOVER-COLOR;
+            }
+            .submit {
+                @include m.button();
+                width: 200px;
+                border: none;
+                margin-top: 50px;
+                cursor: pointer;
+            }
+            .submit:hover {
+                @include m.button-hover();
+            }
+        }
+    }
+
+}

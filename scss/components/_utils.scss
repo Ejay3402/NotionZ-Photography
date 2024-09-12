@@ -1,0 +1,56 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "breakpoint" as b;
+
+/* header nav effect part  */
+
+header.sticky {
+  background: linear-gradient(var(--BG-COLOR), var(--BG-COLOR));
+  padding: 12px 15px;
+  border-bottom: 0.22px solid #121212;
+  box-shadow: 3px 3px 5px var(--BG-COLOR);
+}
+
+/* section part for all part */
+
+section {
+  padding: 110px 8% 125px;
+  position: relative;
+  @include b.breakPoint(large) {
+    padding: 110px 4% 25px;
+  }
+}
+
+.red {
+  color: v.$MAIN-COLOR;
+}
+
+
+/*move-up*/
+
+.move-up {
+  position: fixed;
+  top: 88%;
+  transition: .500s ease-in;
+  right: -100%;
+}
+
+.move-up.show {
+  right: 5%;
+}
+
+.move-up a {
+  color: v.$TEXT-COLOR;
+  font-size: v.$P-FONT;
+  background: v.$MAIN-COLOR;
+  font-weight: 700;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.move-up a:hover {
+  background: v.$MAIN-HOVER-COLOR;
+}
+
