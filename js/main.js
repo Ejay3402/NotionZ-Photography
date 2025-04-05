@@ -1,3 +1,10 @@
+//fetching images
+import { frontImg } from './images/fontImg.js';
+import { servicesText } from './images/service.js';
+import { portfolioBackPics } from './images/portfolio.js';
+
+
+
 //header
 const header = document.querySelector('header');
 window.addEventListener("scroll", () => {
@@ -31,44 +38,148 @@ window.addEventListener("scroll", () => {
     open_meun.classList.remove('fa-xmark');
     header.style.background= '#121212';
 });
+
+//About me image changing 
+
+const aboutMeImg = document.getElementById('aboutMeImg');
+
+const aboutMeImgs = [
+    'aboutMe1.jpg',
+    'aboutMe2.jpg'
+];
+
+let aboutMeCount = 0;
+
+setInterval(() => {
+    aboutMeCount = (aboutMeCount + 1) % aboutMeImgs.length;
+    aboutMeImg.src = `tee-stix-pics/${aboutMeImgs[aboutMeCount]}`;
+}, 10500);
+
 /* 
 about read more */
 
-const less_more = document.querySelector('.less-more');
-
 const know_btn = document.querySelector('.know-more');
-
 const know_more = document.querySelector('#know-more');
-
  
 know_more.style.display = 'none';
-know_btn.style.display = 'block';
 
 know_btn.addEventListener("click", () => {
-    know_more.style.display = 'block';
-    less_more.style.display = 'block';
+    if (know_btn.innerHTML === 'Show more') {
+        know_btn.innerHTML = 'Show less';
+        know_more.style.display = 'block';
+    } else {
+        know_more.style.display = 'none';
+        know_btn.innerHTML = 'Show more'
+    }
 });
 
-less_more.addEventListener("click", () => {
-    know_more.style.display = 'none';
-    less_more.style.display = 'none';
-});
-
-
-/*animation part*/
+/*animation part for h1 text*/
 
 const tee = document.querySelector('.tee');
 
-const teeText = `Tee-Stix`;
+const teeText = `TEMITOPE`;
 
 let count = 1;
 
 const showTeeText = () => {
     tee.textContent = teeText.slice(0 , count);
     count++;
-    if (count > teeText.length) {
-        count = 1;   
-    }
+    count > teeText.length ? count = 1 : 0;
 };
 
 setInterval(showTeeText, 250);
+
+//upload font imagge
+
+const frontPortfolioImages = document.getElementById('portfolio-images');
+
+let frontPortfolioImagesHtml = '';
+
+frontImg.sort(() => Math.random() - .5);
+
+frontImg.forEach( img => {
+    
+    let imgVAl = `
+        <div class="box-img"  data.img='${img.id}'>
+          <img src="${img.image}" />
+        </div>
+    `;
+    frontPortfolioImagesHtml += imgVAl;
+    
+});
+
+frontPortfolioImages.innerHTML = frontPortfolioImagesHtml;
+
+//portfolio show images
+
+const showPortfolioImage = document.getElementById('show-portfolio-image');
+const showedImg = document.getElementById('showed-img');
+const closeImage = document.getElementById('close-image');
+const boxImg = document.querySelectorAll('.box-img');
+
+
+
+boxImg.forEach( (box , i) => {
+    /*  let data = box.dataset.img;
+    console.log(data); */
+    box.addEventListener("click", () => {
+        const boxID = frontImg[i].id;
+        showPortfolioImage.classList.add('opened-img');
+        
+        frontImg.forEach(i => {
+            
+            if (boxID == i.id) {
+                showedImg.innerHTML = `<img src="${i.image}" />`;    
+            }
+
+        });
+    });
+});
+
+closeImage.addEventListener("click", () => {
+    showPortfolioImage.classList.remove('opened-img');
+})
+
+//upating the services te
+
+const servicesTextID = document.getElementById('servicesText');
+servicesText.sort(() => Math.random() - .5);
+let serviceHtml = ``;
+
+servicesText.forEach( i => {
+    let serviceVal = `
+        <div class="box boxid">
+          <h3>${i.serviceName}</h3>
+          <p>${i.serviceContect}</p>
+        </div>
+    `;
+
+    serviceHtml += serviceVal;
+});
+servicesTextID.innerHTML = serviceHtml;
+//service features box
+const boxid = document.querySelectorAll('.boxid');
+
+boxid.forEach( (boxi , i) => boxi.addEventListener( "click", () => {
+    let s = servicesText[i].id;
+} ));
+
+//back-portfolio-images
+const backPortfolioImages = document.getElementById('back-portfolio-images');
+let backPicsHtml = ``;
+
+portfolioBackPics.forEach( (img, i) => {
+    let val = `
+                <div class="box-img">
+          <img src="${img.image}" />
+        </div>
+    `;
+    backPicsHtml += val;
+    console.log(img);
+    
+});
+backPortfolioImages.innerHTML = backPicsHtml;
+backPortfolioImages.innerHTML = 'eooerkfo';
+
+
+

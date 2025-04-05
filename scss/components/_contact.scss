@@ -45,7 +45,7 @@
                     transition: 0.45s ease-in;
                 }
                 a:hover {
-                    color: v.$MAIN-HOVER-COLOR;
+                    color: #4f4f4f;
                     font-size: f.rem(16);
                 }
             }
@@ -132,4 +132,49 @@
         }
     }
 
+}
+
+.chatup {
+    position: fixed;
+    top: 78%;
+    transition: 0.5s ease-in;
+    right: 5%;
+    animation: chat 2s linear infinite both;
+
+    a {
+        color: #fff;
+        font-size: 1.125rem;
+        background: #33cb11;
+        font-weight: 700;
+        padding: 12px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s ease-in;
+        
+        i {
+            fill: #fff;
+        }
+    }
+    a:hover {
+        background: #9dfc4f;
+    }
+    
+}
+
+@keyframes chat {
+    0% {
+        top: 76%;
+    }
+    25% {
+        top: 76%;
+    }
+    50% {
+        top: 78%;
+    }
+    75% {
+        top: 76%;
+    }
+    100% {
+        top: 76%;
+    }
 }

@@ -6,26 +6,48 @@
 
 .about {
   background: linear-gradient(rgba(1, 1, 1, 0.84), rgba(1, 1, 1, 0.85)),
-  url("https://i.pinimg.com/564x/7c/1d/f4/7c1df43346a0cb35ae752bb9bc1f298e.jpg");
+  url("../../scss/tee-stix-pics/bgcamera.jpg");
   @include m.image-set();
   @include m.grid-2fr();
   .about-img {
     width: 100%;
     overflow: hidden;
     border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: .500s ease-in;
+    background-position: center;
     img {
-      overflow: hidden;
+        overflow: hidden;
         max-width: 500px;
+        background-position: center;
         width: 420px;
-        height: auto;
+        height: 75vh;
         cursor: pointer;
         border-radius: 10px;
-        box-shadow: 1px 1px 5px v.$MAIN-COLOR, -1px -1px 5px v.$MAIN-COLOR;
         transition: 0.8s ease-in-out;
+        animation: zoom 10050s linear infinite both;
       }
   }
-  .about-img:hover img {
+
+  @keyframes zoom {
+    0% {
+      scale: 1.3;
+    }
+    15% {
+      scale: 1;
+    }
+    85% {
+      scale: 1;
+    }
+    100% {
+      scale: 1.3;
+    }
+  }
+
+  .about-img:hover img ,
+  .about-img:focus img {
     transform: scale(1.1);
   }
 

@@ -2,7 +2,7 @@
 const meun_list = document.querySelector(`.meun-list`);
 
 const tl = gsap.timeline({
-  duration: 1,
+  duration: 0.5
 });
 
 //header logo
@@ -13,7 +13,7 @@ tl.fromTo(
     x: -500,
   },
   {
-    duration: 1,
+    duration: 0.5,
     opacity: 1,
     x: 0,
   }
@@ -25,7 +25,7 @@ tl.fromTo(
     x: -200,
   },
   {
-    duration: 1,
+    duration: 0.5,
     opacity: 1,
     x: 0,
   }
@@ -37,7 +37,7 @@ tl.fromTo(
     x: 200,
   },
   {
-    duration: 1,
+    duration: 0.5,
     opacity: 1,
     x: 0,
   }
@@ -62,7 +62,7 @@ tl.fromTo(
       x: -500,
     },
     {
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       x: 0,
     }
@@ -74,7 +74,7 @@ tl.fromTo(
       y: -50,
     },
     {
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       y: 0,
     }
@@ -86,7 +86,7 @@ tl.fromTo(
       y: -50,
     },
     {
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       y: 0,
     }
@@ -98,7 +98,7 @@ tl.fromTo(
       y: -50,
     },
     {
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       y: 0,
     }
@@ -110,7 +110,7 @@ tl.fromTo(
       x: -500,
     },
     {
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       x: 0,
     }
