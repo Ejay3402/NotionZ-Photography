@@ -151,8 +151,8 @@ servicesText.forEach( i => {
         <div class="box boxid serviceBox">
           <h3>${i.serviceName}</h3>
           <p>${i.serviceContect}</p>
-          <div class="service-expend hidden" id="service-expend">
-                
+          <div class="Show-details">
+            <button id="Show-details">Show details</button>
           </div>
         </div>
     `;
