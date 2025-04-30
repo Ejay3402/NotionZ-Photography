@@ -44,8 +44,8 @@ window.addEventListener("scroll", () => {
 const aboutMeImg = document.getElementById('aboutMeImg');
 
 const aboutMeImgs = [
-    'aboutMe1.jpg',
-    'aboutMe2.jpg'
+    'aboutme1.jpg',
+    'aboutme2.jpg'
 ];
 
 let aboutMeCount = 0;
