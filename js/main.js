@@ -1,6 +1,6 @@
 //fetching images
 import { frontImg } from './images/fontImg.js';
-import { servicesText } from './images/service.js';
+import { servicesText, moreService } from './images/service.js';
 import { portfolioBackPics } from './images/portfolio.js';
 
 
@@ -148,21 +148,43 @@ let serviceHtml = ``;
 
 servicesText.forEach( i => {
     let serviceVal = `
-        <div class="box boxid">
+        <div class="box boxid serviceBox">
           <h3>${i.serviceName}</h3>
           <p>${i.serviceContect}</p>
+          <div class="service-expend hidden" id="service-expend">
+                
+          </div>
         </div>
     `;
 
     serviceHtml += serviceVal;
 });
 servicesTextID.innerHTML = serviceHtml;
-//service features box
-const boxid = document.querySelectorAll('.boxid');
+//service features box service-expend
 
-boxid.forEach( (boxi , i) => boxi.addEventListener( "click", () => {
-    let s = servicesText[i].id;
-} ));
+const serviceExpend = document.getElementById("service-expend");
+const serviceBox = document.querySelectorAll(".serviceBox");
+
+serviceBox.forEach( (card, i) => card.addEventListener("click", () => {
+    let valHtnl = ``;
+    servicesText.forEach( a => {
+        moreService.forEach( b => {
+            if (a.serviceName === b.moreServiceNname) {
+                let val = `
+                    <div>
+                        <h3>${b.moreServiceContent}</h3>
+                    </div>
+                `;
+                val += valHtnl;
+                 
+                
+            }
+        })
+    })
+    serviceExpend.innerHTML = valHtnl;
+    
+}));
+
 
 //back-portfolio-images
 const backPortfolioImages = document.getElementById('back-portfolio-images');

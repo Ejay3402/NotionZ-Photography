@@ -472,10 +472,14 @@ header .open-meun:hover {
 }
 .service .service-con .box:hover,
 .service .service-con .box:focus {
-  transform: scale(1.1) translateY(-10px);
+  transform: scale(1.102) translateY(-15px);
   cursor: pointer;
-  background: rgb(36, 15, 8);
-  box-shadow: 2px 2px 5px #9e3d17, -2px -2px 5px #9e3d17;
+  background: rgba(26, 15, 18, 0.9);
+  box-shadow: 2px 2px 5px #31060a, -2px -2px 5px #31060a;
+}
+
+.service-expend.active {
+  display: block;
 }
 
 /* portfolio part */

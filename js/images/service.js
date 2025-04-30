@@ -52,3 +52,10 @@ export const servicesText = [
             picture-perfect.`
     },
 ];
+
+export const moreService = [
+    {
+        moreServiceNname :  `Weddings`,
+        moreServiceContent : 'More wedding pics'
+    }
+]

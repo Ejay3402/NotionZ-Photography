@@ -36,11 +36,16 @@
         }
         .box:hover,
         .box:focus {
-            transform: scale(1.1) translateY(-10px);
+            transform: scale(1.102) translateY(-15px);
             cursor: pointer;
-            background: rgb(36, 15, 8);
-            box-shadow: 2px 2px 5px v.$MAIN-HOVER-COLOR,
-              -2px -2px 5px v.$MAIN-HOVER-COLOR;
+            background: rgba(26, 15, 18, 0.9);
+            box-shadow: 2px 2px 5px #31060a,
+              -2px -2px 5px #31060a;
         }
     }
 }
+
+.service-expend.active {
+    display: block;
+}
+
