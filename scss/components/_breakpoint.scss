@@ -1,14 +1,12 @@
-@use "function" as f;
-
 $break-point : (
-    "large" : f.rem(1111),  
-    "tablet" : f.rem(860),  
-    "mini-tablet" : f.rem(698),  
-    "phone" : f.rem(575),  
+    "large" : /* f.rem(1111) */ 1111px,  
+    "tablet" : /* f.rem(860) */ 869px,  
+    "mini-tablet" : /* f.rem(698) */ 698px,  
+    "phone" : /* f.rem(575) */ 575px,  
 );
 
 @mixin breakPoint($val) {
     @media (max-width: map-get($break-point, $val)) {
-        @content;
+       @content;
     }
 }

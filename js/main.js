@@ -1,6 +1,6 @@
 //fetching images
 import { frontImg } from './images/fontImg.js';
-import { servicesText, moreService } from './images/service.js';
+import { servicesText } from './images/service.js';
 import { portfolioBackPics } from './images/portfolio.js';
 
 
@@ -98,38 +98,40 @@ let frontPortfolioImagesHtml = '';
 frontImg.sort(() => Math.random() - .5);
 
 frontImg.forEach( img => {
-    
-    let imgVAl = `
+
+    if (img.under == `front`) {
+        let imgVAl = `
         <div class="box-img"  data.img='${img.id}'>
           <img src="${img.image}" />
         </div>
     `;
     frontPortfolioImagesHtml += imgVAl;
+    }
+    
     
 });
 
 frontPortfolioImages.innerHTML = frontPortfolioImagesHtml;
 
 //portfolio show images
-
+//This shows the image on the image click
 const showPortfolioImage = document.getElementById('show-portfolio-image');
 const showedImg = document.getElementById('showed-img');
 const closeImage = document.getElementById('close-image');
 const boxImg = document.querySelectorAll('.box-img');
 
-
-
 boxImg.forEach( (box , i) => {
-    /*  let data = box.dataset.img;
-    console.log(data); */
     box.addEventListener("click", () => {
         const boxID = frontImg[i].id;
+        const boxUnder = frontImg[i].under;
         showPortfolioImage.classList.add('opened-img');
         
         frontImg.forEach(i => {
-            
-            if (boxID == i.id) {
-                showedImg.innerHTML = `<img src="${i.image}" />`;    
+
+            if (boxUnder === `front`) {
+                if (boxID === i.id) {
+                    showedImg.innerHTML = `<img src="${i.image}" />`;    
+                }   
             }
 
         });
@@ -148,11 +150,11 @@ let serviceHtml = ``;
 
 servicesText.forEach( i => {
     let serviceVal = `
-        <div class="box boxid serviceBox">
+        <div class="box boxid">
           <h3>${i.serviceName}</h3>
           <p>${i.serviceContect}</p>
           <div class="Show-details">
-            <button id="Show-details">Show details</button>
+            <a class="Show-details">Show details --</a>
           </div>
         </div>
     `;
@@ -160,48 +162,45 @@ servicesText.forEach( i => {
     serviceHtml += serviceVal;
 });
 servicesTextID.innerHTML = serviceHtml;
-//service features box service-expend
+//service features box show details
 
-const serviceExpend = document.getElementById("service-expend");
-const serviceBox = document.querySelectorAll(".serviceBox");
+const ShowDetails = document.querySelectorAll('.Show-details');
+const showDetailsSsevice = document.getElementById('show-details-sevice');
+const closeShowDetails = document.getElementById('close-show-details');
+const openDetails = document.getElementById('open-details');
 
-serviceBox.forEach( (card, i) => card.addEventListener("click", () => {
-    let valHtnl = ``;
-    servicesText.forEach( a => {
-        moreService.forEach( b => {
-            if (a.serviceName === b.moreServiceNname) {
-                let val = `
-                    <div>
-                        <h3>${b.moreServiceContent}</h3>
-                    </div>
-                `;
-                val += valHtnl;
-                 
-                
-            }
-        })
+ShowDetails.forEach( (show , i) => show.addEventListener( "click", () => {
+
+    const showId = servicesText[i].id;
+    const showname = servicesText[i].serviceName;
+
+    servicesText.forEach(e => {
+        if (showId === e.id) {
+            frontImg.forEach(i => {
+                let imgShow = i.type;
+                let img = i.image;
+                let imgHtml = ``;
+                if (showname === imgShow) {
+                    
+                    let val = `
+                        <div class="portfolio-images">
+                            <div class="box-img">
+                            <img src="${img}" />
+                            </div>
+                        </div>
+                    `;
+                    imgHtml += val;
+                }
+                openDetails.innerHTML = imgHtml;
+            })
+            showDetailsSsevice.style.display = 'block';
+        }
     })
-    serviceExpend.innerHTML = valHtnl;
     
 }));
 
+closeShowDetails.addEventListener('click', () => showDetailsSsevice.style.display = 'none');
 
-//back-portfolio-images
-const backPortfolioImages = document.getElementById('back-portfolio-images');
-let backPicsHtml = ``;
-
-portfolioBackPics.forEach( (img, i) => {
-    let val = `
-                <div class="box-img">
-          <img src="${img.image}" />
-        </div>
-    `;
-    backPicsHtml += val;
-    console.log(img);
-    
-});
-backPortfolioImages.innerHTML = backPicsHtml;
-backPortfolioImages.innerHTML = 'eooerkfo';
 
 
 

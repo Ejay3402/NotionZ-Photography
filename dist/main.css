@@ -2,11 +2,6 @@
 /*Roboto*/
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 /* variables */
-/* @include b.breakPoint(tablet) {
-    $BIG-FONT: 3.7rem;
-    $H2-FONT: 2.4rem;
-    $P-FONT: 0.8222rem;
-} */
 /* reset part */
 *,
 *::before,
@@ -60,7 +55,7 @@ section {
   padding: 110px 8% 125px;
   position: relative;
 }
-@media (max-width: 69.4375rem) {
+@media (max-width: 1111px) {
   section {
     padding: 110px 4% 25px;
   }
@@ -84,7 +79,7 @@ section {
 
 .move-up a {
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 18px-;
   background: #ff4d05;
   font-weight: 700;
   padding: 12px 15px;
@@ -114,7 +109,7 @@ header {
   border-bottom: 2px solid transparent;
   transition: all 0.45s ease-in-out;
 }
-@media (max-width: 69.4375rem) {
+@media (max-width: 1111px) {
   header {
     padding: 12px 2.5%;
   }
@@ -132,7 +127,7 @@ header .nav-list a {
   position: relative;
   margin: 0 25px;
   font-weight: 600;
-  font-size: 1.0625rem;
+  font-size: 17px;
   transition: all 0.45s ease-in;
   color: #ccc;
 }
@@ -159,11 +154,11 @@ header .open-meun {
   margin-left: 25px;
   z-index: 1000;
   font-weight: 700;
-  font-size: 1.3125rem;
+  font-size: 21px;
   display: none;
   transition: 0.6s ease-in-out;
 }
-@media (max-width: 53.75rem) {
+@media (max-width: 869px) {
   header .open-meun {
     display: block;
   }
@@ -190,7 +185,7 @@ header .open-meun:hover {
   flex-direction: column;
   animation: img 22s ease-in-out infinite both;
 }
-@media (max-width: 69.4375rem) {
+@media (max-width: 1111px) {
   .home {
     padding: 160px 7% 120px;
   }
@@ -248,24 +243,24 @@ header .open-meun:hover {
   font-weight: 700;
   line-height: 32px;
   text-transform: uppercase;
-  font-size: 1.375rem;
+  font-size: 5rem;
   border-radius: 6px;
 }
 .home .slide .two {
   display: inline-block;
   color: #ccc;
   font-weight: 700;
-  font-size: 1.3125rem;
+  font-size: 1px;
 }
 .home h2 {
-  font-size: 5rem;
+  font-size: 80px;
   color: #ccc;
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .home h3 {
-  font-size: 3rem;
+  font-size: 48px;
   color: #ccc;
   line-height: 1.1;
   font-weight: 700;
@@ -287,7 +282,7 @@ header .open-meun:hover {
 }
 .home .btns .btn1 {
   display: inline;
-  font-size: 1.125rem;
+  font-size: 18px-;
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -304,7 +299,7 @@ header .open-meun:hover {
 }
 .home .btns .btn2 {
   display: inline-flex;
-  font-size: 1.125rem;
+  font-size: 18px-;
   align-items: center;
   padding: 12px 5px;
   text-align: center;
@@ -385,19 +380,19 @@ header .open-meun:hover {
 .about .about-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
 .about .about-text h3 {
   margin: 0 0 15px;
-  font-size: 1.5625rem;
+  font-size: 25px;
   font-weight: 700;
   padding: 0 0 10px;
 }
 .about .about-text p {
   margin: 0 0 15px;
-  font-size: 1.125rem;
+  font-size: 18px-;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.1em;
@@ -407,7 +402,7 @@ header .open-meun:hover {
 }
 .about .about-text .more .about-btn {
   display: inline;
-  font-size: 1.125rem;
+  font-size: 18px-;
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -429,6 +424,38 @@ header .open-meun:hover {
 }
 
 /* services part */
+.show-details-sevice-part {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background: linear-gradient(rgba(21, 20, 20, 0.8), rgb(23, 22, 22));
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.show-details-sevice-part .show-head .close-show-details {
+  position: absolute;
+  width: 20px;
+  top: 25px;
+  right: 30px;
+  fill: #f4f4f4;
+  cursor: pointer;
+}
+.show-details-sevice-part .open-details {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  transition: 0.5s ease-in;
+}
+
 .service {
   background: #202020;
 }
@@ -438,7 +465,7 @@ header .open-meun:hover {
 .service .service-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -459,23 +486,32 @@ header .open-meun:hover {
 .service .service-con .box h3 {
   margin: 0 0 15px;
   padding: 0 0 15px;
-  font-size: 1.5625rem;
+  font-size: 25px;
   font-weight: 700;
   color: #ccc;
   border-bottom: 2px solid #9e3d17;
 }
 .service .service-con .box p {
   color: #ccc;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 520;
+  font-size: 16px;
   line-height: 1.3;
 }
 .service .service-con .box .Show-details {
   margin: 10px auto;
 }
-.service .service-con .box .Show-details button {
-  padding: 7px 18px;
-  border-radius: 22px;
+.service .service-con .box .Show-details a {
+  color: #f4f4f4;
+  padding: 7px auto;
+  color: #ff4d05;
+  cursor: pointer;
+  font-size: 1.01rem;
+  font-weight: 500;
+  transition: 0.3s ease-in;
+}
+.service .service-con .box .Show-details a:hover {
+  color: #9e3d17;
+  font-weight: 600;
 }
 .service .service-con .box:hover,
 .service .service-con .box:focus {
@@ -485,10 +521,6 @@ header .open-meun:hover {
   box-shadow: 2px 2px 5px #31060a, -2px -2px 5px #31060a;
 }
 
-.service-expend.active {
-  display: block;
-}
-
 /* portfolio part */
 .portfolio .portfolio-head {
   text-align: center;
@@ -496,7 +528,7 @@ header .open-meun:hover {
 .portfolio .portfolio-head h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -510,7 +542,7 @@ header .open-meun:hover {
   margin-bottom: 50px;
   text-align: center;
 }
-@media (max-width: 53.75rem) {
+@media (max-width: 869px) {
   .portfolio .portfolio-images {
     grid-template-columns: repeat(auto-fit, minmax(125px, auto));
   }
@@ -526,7 +558,7 @@ header .open-meun:hover {
   border-radius: 5px;
   transition: 0.5s ease-in-out;
 }
-@media (max-width: 53.75rem) {
+@media (max-width: 869px) {
   .portfolio .portfolio-images .box-img img {
     width: 145px;
   }
@@ -541,7 +573,7 @@ header .open-meun:hover {
 }
 .portfolio .sm .see-more {
   display: inline;
-  font-size: 1.125rem;
+  font-size: 18px-;
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -620,7 +652,7 @@ header .open-meun:hover {
 .contact .contact-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -633,12 +665,12 @@ header .open-meun:hover {
 .contact .contact-con .contact-list h4 {
   margin: 11px auto;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .contact .contact-con .contact-list p {
   margin: 11px auto;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .contact .contact-con .contact-list li {
   margin: 10px auto;
@@ -653,7 +685,7 @@ header .open-meun:hover {
 .contact .contact-con .contact-list li a {
   color: #ccc;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 18px-;
   margin-right: 3px;
   padding: 3px;
   letter-spacing: 0.1em;
@@ -661,7 +693,7 @@ header .open-meun:hover {
 }
 .contact .contact-con .contact-list li a:hover {
   color: #4f4f4f;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .contact .contact-con .contact-social {
   margin-top: 50px;
@@ -669,7 +701,7 @@ header .open-meun:hover {
 }
 .contact .contact-con .contact-social a {
   margin: 17px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
   padding: 10px 12px;
@@ -700,10 +732,10 @@ header .open-meun:hover {
 .contact .contact-form form h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
-  font-size: 1.0625rem;
+  font-size: 17px;
   text-align: center;
 }
 .contact .contact-form form label {
@@ -736,7 +768,7 @@ header .open-meun:hover {
 }
 .contact .contact-form form .submit {
   display: inline;
-  font-size: 1.125rem;
+  font-size: 18px-;
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -809,7 +841,7 @@ header .open-meun:hover {
   padding: 30px 15px;
 }
 .end p {
-  font-size: 1.125rem;
+  font-size: 18px-;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #ccc;
@@ -828,7 +860,7 @@ header .open-meun:hover {
 .works .work-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
   text-align: center;
@@ -854,7 +886,7 @@ header .open-meun:hover {
 }
 
 /* media screen part */
-@media (max-width: 53.75rem) {
+@media (max-width: 869px) {
   header .nav-list {
     position: absolute;
     top: -1000px;
@@ -906,7 +938,7 @@ header .open-meun:hover {
   }
 }
 /* mini screen */
-@media (max-width: 43.625rem) {
+@media (max-width: 698px) {
   h2 {
     font-size: 2.7rem;
   }
@@ -939,7 +971,7 @@ header .open-meun:hover {
     text-align: center;
   }
   .about .about-text p {
-    font-size: 0.96875rem;
+    font-size: 15px;
     letter-spacing: normal;
   }
   .about .about-img {
@@ -968,7 +1000,7 @@ header .open-meun:hover {
     letter-spacing: normal;
   }
 }
-@media (max-width: 35.9375rem) {
+@media (max-width: 575px) {
   .hone .btns button {
     background: blue;
     font-size: 500px;

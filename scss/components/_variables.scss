@@ -1,4 +1,3 @@
-@use "function" as f;
 @use "breakpoint" as b;
 
 /* variables */
@@ -9,14 +8,6 @@ $TEXT-COLOR: #fff;
 $SECOND-TEXT-COLOR: #ccc;
 $MAIN-COLOR: #ff4d05;
 $MAIN-HOVER-COLOR: #9e3d17;
-$BIG-FONT: f.rem(80);
-$H2-FONT: f.rem(48);
-$P-FONT: f.rem(18);
-
-//tablet mode
-
-/* @include b.breakPoint(tablet) {
-    $BIG-FONT: 3.7rem;
-    $H2-FONT: 2.4rem;
-    $P-FONT: 0.8222rem;
-} */
+$BIG-FONT: /* f.rem(80) */ 80px;
+$H2-FONT: /* f.rem(48) */ 48px;
+$P-FONT: /* f.rem(18) */ 18px-;

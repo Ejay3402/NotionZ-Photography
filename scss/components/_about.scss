@@ -1,6 +1,5 @@
-@use "function" as f;
-@use "variables" as v;
 @use "mixins" as m;
+@use "variables" as v;
 
 /* about me part */
 
@@ -57,7 +56,7 @@
     }
     h3 {
         margin: 0 0 15px;
-        font-size: f.rem(25);
+        font-size: /* f.rem(25) */ 25px;
         font-weight: 700;
         padding: 0 0 10px;
     }

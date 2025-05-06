@@ -1,5 +1,4 @@
 @use "variables" as v;
-@use "function" as f;
 @use "breakpoint" as b;
 
 /* chat me up */
@@ -37,7 +36,7 @@ header {
       position: relative;
       margin: 0 25px;
       font-weight: 600;
-      font-size: f.rem(17);
+      font-size: /* f.rem(17) */ 17px;
       transition: all 0.45s ease-in;
       color: v.$SECOND-TEXT-COLOR;
     }
@@ -65,7 +64,7 @@ header {
     margin-left: 25px;
     z-index: 1000;
     font-weight: 700;
-    font-size: f.rem(21);
+    font-size: /* f.rem(21) */ 21px;
     display: none;
     transition: .600s ease-in-out;
     @include b.breakPoint(tablet) {
