@@ -79,7 +79,7 @@ section {
 
 .move-up a {
   color: #fff;
-  font-size: 18px-;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   background: #ff4d05;
   font-weight: 700;
   padding: 12px 15px;
@@ -243,31 +243,31 @@ header .open-meun:hover {
   font-weight: 700;
   line-height: 32px;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: clamp(0.899rem, 0.857rem + 0.212vw, 1.1rem);
   border-radius: 6px;
 }
 .home .slide .two {
   display: inline-block;
   color: #ccc;
   font-weight: 700;
-  font-size: 1px;
+  font-size: clamp(0.899rem, 0.857rem + 0.212vw, 1.1rem);
 }
 .home h2 {
-  font-size: 80px;
+  font-size: clamp(2.2rem, 1.653rem + 2.737vw, 4.8rem);
   color: #ccc;
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .home h3 {
-  font-size: 48px;
+  font-size: clamp(1.7rem, 0.795rem + 4.526vw, 6rem);
   color: #ccc;
   line-height: 1.1;
   font-weight: 700;
   margin: 0 0 15px;
 }
 .home p {
-  font-size: #fff;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   color: #fff;
   letter-spacing: 0.1em;
   line-height: 1.1;
@@ -282,7 +282,7 @@ header .open-meun:hover {
 }
 .home .btns .btn1 {
   display: inline;
-  font-size: 18px-;
+  font-size: clamp(1rem, 0.947rem + 0.263vw, 1.25rem);
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -299,7 +299,7 @@ header .open-meun:hover {
 }
 .home .btns .btn2 {
   display: inline-flex;
-  font-size: 18px-;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   align-items: center;
   padding: 12px 5px;
   text-align: center;
@@ -380,7 +380,7 @@ header .open-meun:hover {
 .about .about-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -392,7 +392,7 @@ header .open-meun:hover {
 }
 .about .about-text p {
   margin: 0 0 15px;
-  font-size: 18px-;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.1em;
@@ -402,7 +402,7 @@ header .open-meun:hover {
 }
 .about .about-text .more .about-btn {
   display: inline;
-  font-size: 18px-;
+  font-size: clamp(1rem, 0.947rem + 0.263vw, 1.25rem);
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -465,7 +465,7 @@ header .open-meun:hover {
 .service .service-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -494,7 +494,7 @@ header .open-meun:hover {
 .service .service-con .box p {
   color: #ccc;
   font-weight: 520;
-  font-size: 16px;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   line-height: 1.3;
 }
 .service .service-con .box .Show-details {
@@ -528,7 +528,7 @@ header .open-meun:hover {
 .portfolio .portfolio-head h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -573,7 +573,7 @@ header .open-meun:hover {
 }
 .portfolio .sm .see-more {
   display: inline;
-  font-size: 18px-;
+  font-size: clamp(1rem, 0.947rem + 0.263vw, 1.25rem);
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -652,7 +652,7 @@ header .open-meun:hover {
 .contact .contact-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
 }
@@ -685,7 +685,7 @@ header .open-meun:hover {
 .contact .contact-con .contact-list li a {
   color: #ccc;
   font-weight: 700;
-  font-size: 18px-;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   margin-right: 3px;
   padding: 3px;
   letter-spacing: 0.1em;
@@ -732,7 +732,7 @@ header .open-meun:hover {
 .contact .contact-form form h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
   font-size: 17px;
@@ -768,7 +768,7 @@ header .open-meun:hover {
 }
 .contact .contact-form form .submit {
   display: inline;
-  font-size: 18px-;
+  font-size: clamp(1rem, 0.947rem + 0.263vw, 1.25rem);
   padding: 12px 20px;
   color: #fff;
   background: linear-gradient(to right, #ff4d05 70%, rgb(233, 135, 16));
@@ -841,7 +841,7 @@ header .open-meun:hover {
   padding: 30px 15px;
 }
 .end p {
-  font-size: 18px-;
+  font-size: clamp(0.98rem, 0.937rem + 0.063vw, 1.01rem);
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #ccc;
@@ -860,7 +860,7 @@ header .open-meun:hover {
 .works .work-text h2 {
   margin: 0 0 15px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
   padding: 0 0 10px;
   border-bottom: 3px solid #9e3d17;
   text-align: center;
@@ -904,7 +904,6 @@ header .open-meun:hover {
   header .nav-list a {
     display: block;
     margin: 2px;
-    font-size: 1.2rem;
     background: #121212;
     width: 100%;
     padding: 12px;
@@ -920,18 +919,12 @@ header .open-meun:hover {
     padding: 160px 6.5% 120px;
     height: 98vh;
   }
-  .home h2 {
-    font-size: 3.7rem;
-  }
-  .home h3 {
-    font-size: 2.4rem;
-  }
   .home p {
     letter-spacing: normal;
     line-height: 1.4;
   }
   .service {
-    padding: 100px 13% 25px;
+    padding: 100px 6% 25px;
   }
   .portfolio {
     padding: 100px 3% 25px;
@@ -939,9 +932,6 @@ header .open-meun:hover {
 }
 /* mini screen */
 @media (max-width: 698px) {
-  h2 {
-    font-size: 2.7rem;
-  }
   header {
     padding: 12px;
   }
@@ -952,14 +942,7 @@ header .open-meun:hover {
     padding: 160px 5.5% 120px;
     height: 111vh;
   }
-  .home h2 {
-    font-size: 3rem;
-  }
-  .home h3 {
-    font-size: 1.6rem;
-  }
   .home p {
-    font-size: 1rem;
     letter-spacing: normal;
     line-height: 1.4;
   }
@@ -967,11 +950,9 @@ header .open-meun:hover {
     grid-template-columns: 1fr;
   }
   .about .about-text h2 {
-    font-size: 3rem;
     text-align: center;
   }
   .about .about-text p {
-    font-size: 15px;
     letter-spacing: normal;
   }
   .about .about-img {
@@ -980,14 +961,12 @@ header .open-meun:hover {
     max-width: 100%;
   }
   .service {
-    padding: 100px 11% 25px;
+    padding: 100px 5% 25px;
   }
   .service .service-text h2 {
-    font-size: 2.6rem;
     text-align: center;
   }
   .contact .contact-text h2 {
-    font-size: 2.6rem;
     text-align: center;
   }
   .contact .contact-con {
@@ -1003,9 +982,8 @@ header .open-meun:hover {
 @media (max-width: 575px) {
   .hone .btns button {
     background: blue;
-    font-size: 500px;
   }
   .service {
-    padding: 100px 10% 25px;
+    padding: 100px 3% 25px;
   }
 }/*# sourceMappingURL=main.css.map */

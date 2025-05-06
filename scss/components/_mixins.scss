@@ -13,7 +13,7 @@
 
 @mixin button {
   display: inline;
-  font-size: v.$P-FONT;
+  font-size: v.$P3-FONT;
   padding: 12px 20px;
   color: v.$TEXT-COLOR;
   background: linear-gradient(to right, v.$MAIN-COLOR 70%, rgb(233, 135, 16));

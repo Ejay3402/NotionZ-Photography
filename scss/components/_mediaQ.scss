@@ -4,11 +4,6 @@
 
 /* media screen part */
 @include b.breakPoint(tablet) {
-    $BIG-FONT: 3.7rem;
-    $H2-FONT: 2.4rem;
-    $P-FONT: 0.8222rem;
-
-
     header {
         .nav-list {
             position: absolute;
@@ -26,7 +21,7 @@
             a {
                 display: block;
                 margin: 2px;
-                font-size: 1.2rem;
+                //font-size: 1.2rem;
                 background: v.$BG-COLOR;
                 width: 100%;
                 padding: 12px;
@@ -44,19 +39,14 @@
     .home {
         padding: 160px 6.5% 120px;
         height: 98vh;
-        h2 {
-            font-size: 3.7rem;
-        }
-        h3 {
-            font-size: 2.4rem;
-        }
+        
         p {
             letter-spacing: normal;
             line-height: 1.4;
         }
     }
     .service {
-        padding: 100px 13% 25px;
+        padding: 100px 6% 25px;
     }
     
     .portfolio {
@@ -67,10 +57,6 @@
 
 /* mini screen */
 @include b.breakPoint(mini-tablet) {
-  
-   h2 {
-    font-size: 2.7rem;
-   } 
 
   header {
     padding: 12px;
@@ -83,14 +69,8 @@
   .home {
     padding: 160px 5.5% 120px;
     height: 111vh;
-    h2 {
-        font-size: 3rem;
-    }
-    h3 {
-        font-size: 1.6rem;
-    }
+    
     p {
-        font-size: 1rem;
         letter-spacing: normal;
         line-height: 1.4;
     }
@@ -100,11 +80,9 @@
     grid-template-columns: 1fr;
     .about-text {
         h2 {
-            font-size: 3rem;
             text-align: center;
         }
         p {
-            font-size: /* f.rem(15.5) */ 15px;
             letter-spacing: normal;
         }
     }
@@ -116,10 +94,9 @@
   }
 
   .service {
-    padding: 100px 11% 25px;
+    padding: 100px 5% 25px;
     .service-text {
         h2 {
-            font-size: 2.6rem;
             text-align: center;
         }
     }
@@ -128,7 +105,6 @@
   .contact {
     .contact-text {
         h2 {
-            font-size: 2.6rem;
             text-align: center;
         }
     }
@@ -152,13 +128,13 @@
         .btns {
             button {
                 background: blue;
-                font-size: 500px;
+                //font-size: 500px;
             } 
         }
     }
 
     .service {
-        padding: 100px 10% 25px;
+        padding: 100px 3% 25px;
     }
     
 }
