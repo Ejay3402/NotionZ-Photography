@@ -18,19 +18,19 @@
             h4 {
                 margin: 11px auto;
                 font-weight: 700;
-                font-size: /* f.rem(16)*/ 16px;
+                font-size: v.$P3-FONT;
             }
             p {
                 margin: 11px auto;
                 font-weight: 700;
-                font-size: /* f.rem(16) */ 16px ;
+                font-size: v.$P3-FONT;
             }
             li {
                 margin: 10px auto;
                 i {
                     color: red;
                     font-weight: 700;
-                    font-size: 1.2rem;
+                    font-size: v.$P-FONT;
                     margin-right: 3px;
                     padding: 2px;
                 }
@@ -44,8 +44,7 @@
                     transition: 0.45s ease-in;
                 }
                 a:hover {
-                    color: #4f4f4f;
-                    font-size: /* f.rem(16) */ 16px;
+                    color: #f7f0f0;
                 }
             }
         }
@@ -53,8 +52,8 @@
             margin-top: 50px;
             margin-left: 11px;
             a {
-                margin: 17px;
-                font-size: /* f.rem(16) */ 16px;
+                margin: 12px;
+                font-size: v.$P3-FONT;
                 font-weight: 700;
                 color: v.$TEXT-COLOR;
                 padding: 10px 12px;
@@ -87,13 +86,13 @@
             margin-top: 15px;
             h2 {
                 @include m.h2();
-                font-size: /* f.rem(17) */ 17px;
+                font-size: v.$P4-FONT;
                 text-align: center;
             }
             label {
                 padding: 8ox;
                 font-weight: 700;
-                font-size: 1.3rem;
+                font-size: v.$P4-FONT;
                 margin-top: 11px;
                 margin-bottom: 15px;
             }
@@ -102,7 +101,7 @@
                 width: 100%;
                 color: v.$TEXT-COLOR;
                 background: v.$SECOND-BG-COLOR;
-                font-size: 1rem;
+                font-size: v.$P4-FONT;
                 border-radius: 9px;
                 font-weight: 700;
                 border: none;

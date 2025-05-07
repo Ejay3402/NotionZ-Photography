@@ -78,6 +78,7 @@
 
   .about {
     grid-template-columns: 1fr;
+    padding-top: 5px;
     .about-text {
         h2 {
             text-align: center;
@@ -90,6 +91,10 @@
         text-align: center;
         order: 2;
         max-width: 100%;
+        img {
+            border-radius: 50%;
+            height: 300px;
+        }
     }
   }
 
