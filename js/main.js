@@ -3,7 +3,21 @@ import { frontImg } from './images/fontImg.js';
 import { servicesText } from './images/service.js';
 import { portfolioBackPics } from './images/portfolio.js';
 
+//About me image changing 
 
+const aboutMeImg = document.getElementById('aboutMeImg');
+
+const aboutMeImgs = [
+    'aboutme1.jpg',
+    'aboutme2.jpg'
+];
+
+let aboutMeCount = 0;
+
+setInterval(() => {
+    aboutMeCount = (aboutMeCount + 1) % aboutMeImgs.length;
+    aboutMeImg.src = `tee-stix-pics/${aboutMeImgs[aboutMeCount]}`;
+}, 10500);
 
 //header
 const header = document.querySelector('header');
@@ -39,21 +53,6 @@ window.addEventListener("scroll", () => {
     header.style.background= '#121212';
 });
 
-//About me image changing 
-
-const aboutMeImg = document.getElementById('aboutMeImg');
-
-const aboutMeImgs = [
-    'aboutme1.jpg',
-    'aboutme2.jpg'
-];
-
-let aboutMeCount = 0;
-
-setInterval(() => {
-    aboutMeCount = (aboutMeCount + 1) % aboutMeImgs.length;
-    aboutMeImg.src = `tee-stix-pics/${aboutMeImgs[aboutMeCount]}`;
-}, 10500);
 
 /* 
 about read more */
@@ -171,31 +170,17 @@ const openDetails = document.getElementById('open-details');
 
 ShowDetails.forEach( (show , i) => show.addEventListener( "click", () => {
 
-    const showId = servicesText[i].id;
-    const showname = servicesText[i].serviceName;
-
-    servicesText.forEach(e => {
-        if (showId === e.id) {
-            frontImg.forEach(i => {
-                let imgShow = i.type;
-                let img = i.image;
-                let imgHtml = ``;
-                if (showname === imgShow) {
-                    
-                    let val = `
-                        <div class="portfolio-images">
-                            <div class="box-img">
-                            <img src="${img}" />
-                            </div>
-                        </div>
-                    `;
-                    imgHtml += val;
-                }
-                openDetails.innerHTML = imgHtml;
-            })
-            showDetailsSsevice.style.display = 'block';
-        }
+    const service = servicesText[i].serviceName;
+    const images = frontImg.filter(f => f.type === service.serviceName);
+    images.forEach( e => {
+        console.log(e.image);    
     })
+    
+    console.log(service);
+    
+    const showname = frontImg[i].type;
+
+    showDetailsSsevice.style.display = 'block';
     
 }));
 
