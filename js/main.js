@@ -1,7 +1,6 @@
 //fetching images
 import { frontImg } from './images/fontImg.js';
 import { servicesText } from './images/service.js';
-import { portfolioBackPics } from './images/portfolio.js';
 
 //About me image changing 
 
@@ -100,7 +99,7 @@ frontImg.forEach( img => {
 
     if (img.under == `front`) {
         let imgVAl = `
-        <div class="box-img"  data.img='${img.id}'>
+        <div class="box-img"  data-id='${img.id}'>
           <img src="${img.image}" />
         </div>
     `;
@@ -119,27 +118,48 @@ const showedImg = document.getElementById('showed-img');
 const closeImage = document.getElementById('close-image');
 const boxImg = document.querySelectorAll('.box-img');
 
-boxImg.forEach( (box , i) => {
+boxImg.forEach(box => {
     box.addEventListener("click", () => {
-        const boxID = frontImg[i].id;
+        const boxID = parseInt(box.dataset.id) ;
+        const match = frontImg.find(p => p.id === boxID)
+
+        showPortfolioImage.classList.add('opened-img');
+        if (match) {
+            showedImg.innerHTML = `<img src="${match.image}" />`;    
+        } else {
+            showedImg.innerHTML = `No image found`;
+            console.log(match, boxID);
+                
+        }
+
+        /* 
+
+
         const boxUnder = frontImg[i].under;
         showPortfolioImage.classList.add('opened-img');
         
-        frontImg.forEach(i => {
+        frontImg.forEach(p => {
 
-            if (boxUnder === `front`) {
-                if (boxID === i.id) {
+            if (boxUnder === `front` || boxUnder === `back`) {
+                if (boxID === p.id) {
                     showedImg.innerHTML = `<img src="${i.image}" />`;    
-                }   
-            }
+                }
+            }   
 
-        });
+        });  */
     });
 });
 
 closeImage.addEventListener("click", () => {
     showPortfolioImage.classList.remove('opened-img');
 })
+
+window.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === "Escape") {
+      showPortfolioImage.classList.remove('opened-img');
+      
+    }
+  })
 
 //upating the services te
 

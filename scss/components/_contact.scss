@@ -49,14 +49,16 @@
             }
         }
         .contact-social {
-            margin-top: 50px;
-            margin-left: 11px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             a {
-                margin: 12px;
+                margin: 7px 5px;
                 font-size: v.$P3-FONT;
                 font-weight: 700;
                 color: v.$TEXT-COLOR;
-                padding: 10px 12px;
+                padding: 10px 15px;
                 background: transparent;
                 border-radius: 50%;
                 border: 1.5px solid var(--MAIN-HOVER-COLOR);

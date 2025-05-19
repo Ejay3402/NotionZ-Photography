@@ -106,7 +106,6 @@
         </div>
 
         <div class="open-details portfolio-images" >
-          <!-- <h1 id="open-details">Hello World</h1> -->
            <img id="open-details" src="" alt="">
         </div>
 
@@ -200,8 +199,8 @@
         </div>
 
         <div class="contact-form">
-          <form action="https://formspree.io/f/mdknnbgd" method="POST">
-            <h2>Send me a message</h2>
+          <form  action="https://formspree.io/f/mdknnbgd"  method="POST">
+          <h2>Send me a message</h2>
 
             <label for="F-name">First Name</label>
             <input
@@ -217,7 +216,7 @@
               type="text"
               name="Last Name"
               id="l-name"
-              placeholder="Your Last Name"
+              placeholder=" Your Last Name"
               required
             />
 
@@ -235,7 +234,7 @@
               name="Email"
               type="email"
               id="Email"
-              placeholder="Enter Email if have one"
+              placeholder="youremail@gmail.com"
             />
 
             <label for="message"
@@ -248,6 +247,10 @@
               rows="4"
               placeholder="How can we be of help"
             ></textarea>
+
+            <!-- <!-- the reCAPTCHA widget 
+  <div class="g-recaptcha" data-sitekey="6LdUKEArAAAAAH2U1Jq6i-bU6J9GmTGhTYOwUZFI"></div> -->
+
             <input class="submit" type="submit" value="Send Message" />
           </form>
         </div>
@@ -281,5 +284,52 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script defer src="js/gsap.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    
+  <script>
+    document.getElementById('contact-form')
+      .addEventListener('submit', async e => {
+        e.preventDefault();
+
+        // 1) Grab the token:
+        const token = grecaptcha.getResponse();
+        if (!token) {
+          alert('Please check “I’m not a robot.”');
+          return;
+        }
+
+        // 2) Collect form data + token
+        const form = e.target;
+        const payload = {
+          name:    form.name.value,
+          email:   form.email.value,
+          message: form.message.value,
+          number : form.number.value,
+          'g-recaptcha-response': token
+        };
+
+        // 3) Send to YOUR API endpoint
+        try {
+          const res = await fetch('https://formspree.io/f/mdknnbgdm', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const json = await res.json();
+          if (res.ok) {
+            alert('Thanks! We got your message.');
+            form.reset();
+            grecaptcha.reset();
+          } else {
+            alert('Error: ' + (json.error || res.statusText));
+          }
+        } catch (err) {
+          alert('Network error: ' + err.message);
+        }
+      });
+  </script>
+
   </body>
 </html>

@@ -694,15 +694,17 @@ header .open-meun:hover {
   color: #f7f0f0;
 }
 .contact .contact-con .contact-social {
-  margin-top: 50px;
-  margin-left: 11px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact .contact-con .contact-social a {
-  margin: 12px;
+  margin: 7px 5px;
   font-size: clamp(1.02rem, 0.947rem + 0.263vw, 1.25rem);
   font-weight: 700;
   color: #fff;
-  padding: 10px 12px;
+  padding: 10px 15px;
   background: transparent;
   border-radius: 50%;
   border: 1.5px solid var(--MAIN-HOVER-COLOR);
@@ -977,7 +979,7 @@ header .open-meun:hover {
     grid-template-columns: 1fr;
   }
   .contact .contact-social a {
-    margin: 5px;
+    margin: 5px 1px;
   }
   .contact .contact-list li a {
     letter-spacing: normal;

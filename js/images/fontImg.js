@@ -18,7 +18,7 @@ export const frontImg = [
     {
         id : 3,
         image : `${frontCat}img54${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -53,7 +53,7 @@ export const frontImg = [
     {
         id : 9,
         image : `${frontCat}img4${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Portraits'
     },
     {
@@ -137,7 +137,7 @@ export const frontImg = [
     {
         id : 23,
         image : `${frontCat}img18${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Portraits'
     },
     {
@@ -179,7 +179,7 @@ export const frontImg = [
     {
         id : 30,
         image : `${frontCat}img25${m}.jpg`,
-        under : 'front',
+        under : 'back-',
         type : 'Weddings'
     },
     {
@@ -191,7 +191,7 @@ export const frontImg = [
     {
         id : 32,
         image : `${frontCat}img27${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -203,19 +203,19 @@ export const frontImg = [
     {
         id : 34,
         image : `${frontCat}img29${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 35,
         image : `${frontCat}img30${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 36,
         image : `${frontCat}img31${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -233,7 +233,7 @@ export const frontImg = [
     {
         id : 39,
         image : `${frontCat}img34${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -245,25 +245,25 @@ export const frontImg = [
     {
         id : 41,
         image : `${frontCat}img36${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 42,
         image : `${frontCat}img37${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 43,
         image : `${frontCat}img38${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 44,
         image : `${frontCat}img39${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -275,25 +275,25 @@ export const frontImg = [
     {
         id : 46,
         image : `${frontCat}img41${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 47,
         image : `${frontCat}img42${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 48,
         image : `${frontCat}img43${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
         id : 49,
         image : `${frontCat}img44${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -359,7 +359,7 @@ export const frontImg = [
     {
         id : 60,
         image : `${frontCat}img59${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
@@ -377,7 +377,7 @@ export const frontImg = [
     {
         id : 63,
         image : `${frontCat}img62${m}.jpg`,
-        under : 'front',
+        under : 'back',
         type : 'Weddings'
     },
     {
